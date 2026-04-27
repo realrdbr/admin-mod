@@ -30,7 +30,7 @@ public class AdminMod implements ModInitializer {
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) ->
                 dispatcher.register(
                         CommandManager.literal("adminmod")
-                                .requires(source -> source.hasPermissionLevel(2))
+                                .requires(source -> source.hasPermission(2))
                                 .then(CommandManager.literal("reload")
                                         .executes(ctx -> {
                                             loadConfig();
