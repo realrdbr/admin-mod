@@ -18,7 +18,7 @@ public class MixinServerCommandSource {
      * during parsing and tab-completion. Actual command filtering (allowedCommands list)
      * is enforced separately in MixinCommandManager before execution.
      */
-    @Inject(method = "hasPermissionLevel", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "hasPermission", at = @At("HEAD"), cancellable = true)
     private void adminMod_hasPermissionLevel(int level, CallbackInfoReturnable<Boolean> cir) {
         ServerCommandSource self = (ServerCommandSource) (Object) this;
         Entity entity = self.getEntity();
