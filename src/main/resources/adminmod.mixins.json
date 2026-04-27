@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.realrdbr.adminmod.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "MixinServerCommandSource",
+    "MixinCommandManager"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

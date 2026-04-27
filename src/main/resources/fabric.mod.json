@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "admin-mod",
+  "version": "${version}",
+  "name": "Admin Mod",
+  "description": "Erlaubt konfigurierten Spielern, OP-Befehle ohne OP-Status zu nutzen. Die erlaubten Befehle sind frei konfigurierbar.",
+  "authors": [
+    "realrdbr"
+  ],
+  "contact": {
+    "sources": "https://github.com/realrdbr/admin-mod"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.realrdbr.adminmod.AdminMod"
+    ]
+  },
+  "mixins": [
+    "adminmod.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
